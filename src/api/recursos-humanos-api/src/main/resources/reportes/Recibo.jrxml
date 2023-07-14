@@ -1,0 +1,602 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.12.2.final using JasperReports Library version 6.12.2-75c5e90a222ab406e416cbf590a5397028a52de3  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Recibo" pageWidth="612" pageHeight="792" whenNoDataType="AllSectionsNoDetail" columnWidth="572" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="16f36ee6-4bd8-4e0b-bc29-11f3d01aa5bf">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.property.dataset.dialog.DatasetDialog.sash.w1" value="140"/>
+	<property name="com.jaspersoft.studio.property.dataset.dialog.DatasetDialog.sash.w2" value="846"/>
+	<subDataset name="ConceptoList" uuid="62864056-f693-40ce-8cd1-7956f269322b">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+		<field name="numConcepto" class="java.lang.Integer"/>
+		<field name="cuentaContable" class="java.lang.String"/>
+		<field name="descripcion" class="java.lang.String"/>
+		<field name="subtotal" class="java.math.BigDecimal"/>
+		<field name="descuento" class="java.math.BigDecimal"/>
+		<field name="total" class="java.math.BigDecimal"/>
+		<variable name="TotalGlobal" class="java.math.BigDecimal" calculation="Sum">
+			<variableExpression><![CDATA[$F{total}]]></variableExpression>
+		</variable>
+	</subDataset>
+	<parameter name="QR" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="FechaCobro" class="java.util.Date" isForPrompting="false"/>
+	<parameter name="Modulo" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="Nombre" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="NoEmpleado" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="Rfc" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="SerieFolio" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="LineaCaptura" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="Tramite" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="CadenaOriginal" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="FirmaElectronica" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="Municipio" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="Area" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="ConceptoList" class="java.util.List" isForPrompting="false"/>
+	<parameter name="Logo" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="Puesto" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="Responsable" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="Dominio" class="java.lang.String" isForPrompting="false"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<variable name="No" class="java.lang.Integer" incrementType="Column" calculation="Count">
+		<variableExpression><![CDATA[new java.lang.Integer (1)]]></variableExpression>
+		<initialValueExpression><![CDATA[new java.lang.Integer (0)]]></initialValueExpression>
+	</variable>
+	<group name="Group1">
+		<groupHeader>
+			<band height="79">
+				<staticText>
+					<reportElement x="425" y="3" width="66" height="23" uuid="f698ac31-964c-4bca-82b9-c71b1190dfd6">
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					</reportElement>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[DESCUENTO]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="491" y="3" width="68" height="23" uuid="567a837d-1a49-4b6f-be0d-5ae7a271f426">
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					</reportElement>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[TOTAL]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="130" y="3" width="229" height="23" uuid="7b84ddf6-5980-4917-9fe4-f35141c9d9ee"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[CONCEPTO]]></text>
+				</staticText>
+				<line>
+					<reportElement x="7" y="26" width="552" height="1" uuid="d5b95fd5-942e-437b-8b5a-36b6f78c50bc"/>
+					<graphicElement>
+						<pen lineWidth="1.5"/>
+					</graphicElement>
+				</line>
+				<staticText>
+					<reportElement x="359" y="3" width="66" height="23" uuid="d12cc9a6-6308-441c-ab50-51775464e17c"/>
+					<box leftPadding="7"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[SUBTOTAL]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="7" y="3" width="23" height="23" uuid="effb8202-258c-4451-ad73-97b927761f22"/>
+					<box leftPadding="7"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[NO.]]></text>
+				</staticText>
+				<line>
+					<reportElement x="6" y="2" width="552" height="1" uuid="cd6eeea1-7b11-49c0-9afc-1ed3a2ec4b36"/>
+					<graphicElement>
+						<pen lineWidth="1.5"/>
+					</graphicElement>
+				</line>
+				<staticText>
+					<reportElement x="30" y="3" width="100" height="23" uuid="20940d69-8245-4cef-a207-855e6cc84d1a"/>
+					<box leftPadding="7"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[CUENTA CONTABLE]]></text>
+				</staticText>
+				<componentElement>
+					<reportElement x="20" y="30" width="542" height="49" uuid="915ab335-59f6-4c8c-a093-15779b91b62c">
+						<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+						<property name="com.jaspersoft.studio.table.style.table_header" value="Table_TH"/>
+						<property name="com.jaspersoft.studio.table.style.column_header" value="Table_CH"/>
+						<property name="com.jaspersoft.studio.table.style.detail" value="Table_TD"/>
+					</reportElement>
+					<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+						<datasetRun subDataset="ConceptoList" uuid="9cb93b6f-0066-41ca-a20b-d20da1d1d561">
+							<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($P{ConceptoList})]]></dataSourceExpression>
+						</datasetRun>
+						<jr:column width="40" uuid="5899ba17-3509-4590-859c-81f6381d4011">
+							<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column1"/>
+							<jr:tableFooter height="25" rowSpan="2"/>
+							<jr:detailCell height="19">
+								<textField>
+									<reportElement x="0" y="0" width="40" height="19" uuid="fe60203a-e39a-47b4-bbdc-2341549bd70a"/>
+									<textFieldExpression><![CDATA[$F{numConcepto}]]></textFieldExpression>
+								</textField>
+							</jr:detailCell>
+						</jr:column>
+						<jr:column width="90" uuid="4ad72c0c-6a59-4bb7-803b-cb6a7f221a99">
+							<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column2"/>
+							<jr:tableFooter height="25" rowSpan="2"/>
+							<jr:detailCell height="19">
+								<textField>
+									<reportElement x="0" y="0" width="90" height="19" uuid="795d1a48-4bf8-49b7-a8f0-10904604b572"/>
+									<box leftPadding="0"/>
+									<textElement>
+										<font size="8"/>
+									</textElement>
+									<textFieldExpression><![CDATA[$F{cuentaContable}]]></textFieldExpression>
+								</textField>
+							</jr:detailCell>
+						</jr:column>
+						<jr:column width="210" uuid="ac8109dd-2a23-4d02-a037-5f81496cd457">
+							<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column3"/>
+							<jr:tableFooter height="25" rowSpan="2"/>
+							<jr:detailCell height="19">
+								<textField isBlankWhenNull="true">
+									<reportElement x="0" y="0" width="210" height="19" uuid="11f62606-7645-44fc-a64e-d40c5937f188"/>
+									<box leftPadding="15"/>
+									<textElement textAlignment="Center">
+										<font size="8"/>
+									</textElement>
+									<textFieldExpression><![CDATA[$F{descripcion}]]></textFieldExpression>
+								</textField>
+							</jr:detailCell>
+						</jr:column>
+						<jr:columnGroup width="130" uuid="c594362b-5c80-45f0-964c-a6a30359dd6f">
+							<property name="com.jaspersoft.studio.components.table.model.column.name" value="Columns [2]"/>
+							<jr:tableFooter height="25" rowSpan="1">
+								<staticText>
+									<reportElement x="0" y="0" width="130" height="25" uuid="c9068b3b-20e3-490e-a76e-24bbffa2f8f0">
+										<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+									</reportElement>
+									<box rightPadding="2">
+										<topPen lineWidth="1.0" lineColor="#000000"/>
+										<leftPen lineWidth="0.0" lineColor="#BF100A"/>
+										<bottomPen lineWidth="0.0" lineColor="#BF100A"/>
+										<rightPen lineWidth="0.0" lineColor="#BF100A"/>
+									</box>
+									<textElement textAlignment="Right" verticalAlignment="Bottom">
+										<font size="10" isBold="true"/>
+									</textElement>
+									<text><![CDATA[TOTAL A PAGAR:]]></text>
+								</staticText>
+							</jr:tableFooter>
+							<jr:column width="60" uuid="ec315d45-7449-4a9d-a1e9-7c5b2c113487">
+								<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column4"/>
+								<jr:tableFooter height="0" rowSpan="1"/>
+								<jr:detailCell height="19">
+									<textField pattern="$#,##0.00;$-#,##0.00">
+										<reportElement x="0" y="0" width="60" height="19" uuid="c91f407e-a00f-45f4-8819-92ad6822395e"/>
+										<textElement textAlignment="Right">
+											<font size="8"/>
+										</textElement>
+										<textFieldExpression><![CDATA[$F{subtotal}]]></textFieldExpression>
+									</textField>
+								</jr:detailCell>
+							</jr:column>
+							<jr:column width="70" uuid="70b6b449-7a93-49a2-8b5b-b2e5f58c0cfd">
+								<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column5"/>
+								<jr:tableFooter height="0" rowSpan="1"/>
+								<jr:detailCell height="19">
+									<textField pattern="$#,##0.00;$-#,##0.00">
+										<reportElement x="0" y="0" width="70" height="19" uuid="7e15e872-4976-480c-bcd7-2dc159501b43"/>
+										<box>
+											<bottomPen lineWidth="0.0"/>
+										</box>
+										<textElement textAlignment="Right">
+											<font size="8"/>
+										</textElement>
+										<textFieldExpression><![CDATA[$F{descuento}]]></textFieldExpression>
+									</textField>
+								</jr:detailCell>
+							</jr:column>
+						</jr:columnGroup>
+						<jr:column width="70" uuid="4e87323d-7318-48d7-8e01-f444b5110478">
+							<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column6"/>
+							<jr:tableFooter height="25" rowSpan="2">
+								<textField pattern="$#,##0.00;$-#,##0.00">
+									<reportElement x="0" y="0" width="70" height="25" uuid="13cfcdef-d72c-4621-87e2-b1c92880a663"/>
+									<box>
+										<topPen lineWidth="1.0"/>
+									</box>
+									<textElement textAlignment="Right" verticalAlignment="Bottom">
+										<font size="8" isBold="true"/>
+									</textElement>
+									<textFieldExpression><![CDATA[$V{TotalGlobal}]]></textFieldExpression>
+								</textField>
+							</jr:tableFooter>
+							<jr:detailCell height="19">
+								<box>
+									<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								</box>
+								<textField pattern="$#,##0.00;$-#,##0.00">
+									<reportElement x="0" y="0" width="70" height="19" uuid="77b8339c-028f-4472-9ba9-2313c926fbaf"/>
+									<box>
+										<bottomPen lineWidth="0.0"/>
+									</box>
+									<textElement textAlignment="Right">
+										<font size="8"/>
+									</textElement>
+									<textFieldExpression><![CDATA[$F{total}]]></textFieldExpression>
+								</textField>
+							</jr:detailCell>
+						</jr:column>
+					</jr:table>
+				</componentElement>
+			</band>
+		</groupHeader>
+	</group>
+	<title>
+		<band height="171">
+			<textField isBlankWhenNull="true">
+				<reportElement x="163" y="11" width="248" height="13" uuid="e4f49990-501f-41db-bf2f-2862dcca0471"/>
+				<textElement textAlignment="Center">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Municipio}]]></textFieldExpression>
+			</textField>
+			<componentElement>
+				<reportElement x="252" y="45" width="89" height="28" uuid="69d89ebd-7a31-46cf-9e03-dcf5d680c9df">
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<jr:barbecue xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" type="Codabar" drawText="false" checksumRequired="false">
+					<jr:codeExpression><![CDATA["1234"]]></jr:codeExpression>
+				</jr:barbecue>
+			</componentElement>
+			<textField isBlankWhenNull="true">
+				<reportElement x="252" y="73" width="89" height="12" uuid="40ed11ee-ef16-43ea-bf61-95011557b14b"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+			</textField>
+			<line>
+				<reportElement x="7" y="86" width="552" height="1" uuid="6503796d-b8e6-46a1-a14d-14e7d1bf3bbc"/>
+				<graphicElement>
+					<pen lineWidth="1.5"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="8" y="128" width="78" height="14" uuid="a1551efc-4c4b-4feb-9b44-19db898e7b33">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LINEA CAPTURA:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="290" y="87" width="112" height="14" uuid="399c2deb-6a47-4845-b318-d8604aac36bc">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[MÓDULO:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="86" y="128" width="204" height="14" uuid="31a6e948-21ee-4b51-b583-9483a88e2654"/>
+				<box leftPadding="2" rightPadding="0"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{LineaCaptura}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="402" y="101" width="153" height="14" uuid="84501ea4-0783-4c94-bd84-68add8a87b5d">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<box leftPadding="3"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{NoEmpleado}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="290" y="115" width="112" height="13" uuid="1bf4815c-a18a-4191-bb20-59e97169193c">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SERIE FOLIO: ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="8" y="115" width="78" height="13" uuid="dd93eb69-3b86-4c91-948d-bfde54cbf26b">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[RFC:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="86" y="115" width="204" height="13" uuid="b414d144-8b68-4f00-81a6-9b470193e6dd"/>
+				<box leftPadding="2" rightPadding="0"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Rfc}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="8" y="101" width="78" height="14" uuid="05767016-b451-4d70-a2f1-4370cbb6b298">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NOMBRE:]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy" isBlankWhenNull="true">
+				<reportElement x="86" y="87" width="204" height="14" uuid="7897a30e-8388-4dd1-afa1-e50822342000">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<box leftPadding="2" rightPadding="0"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{FechaCobro}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="86" y="101" width="204" height="14" uuid="a894e6dc-6c65-4f7e-b263-c7b496579879"/>
+				<box leftPadding="2" rightPadding="0"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Nombre}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="402" y="115" width="153" height="13" uuid="e131e901-37bd-4d3f-a6a1-2a3e3383e581"/>
+				<box leftPadding="3"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{SerieFolio}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="402" y="87" width="153" height="14" uuid="8c49cbd0-1048-48bc-bed1-d1eedbb4f61c">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<box leftPadding="3"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Modulo}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="290" y="101" width="112" height="14" uuid="c05df297-1da7-4733-b6c8-f92d7b9f110b">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CAJERO:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="8" y="87" width="78" height="14" uuid="739dfe4c-2d2c-4d85-b54a-fc5cf3359012">
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[FECHA COBRO:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="86" y="142" width="469" height="14" isRemoveLineWhenBlank="true" uuid="49bc5e51-9c70-422b-85f3-2c63921cb15b">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<box leftPadding="2" rightPadding="0"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Tramite}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="8" y="142" width="78" height="14" isRemoveLineWhenBlank="true" uuid="b7f02199-127c-427d-9eed-5e83ea03502e">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TRAMITE:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="164" y="28" width="248" height="13" uuid="0a89be3a-26b9-43ae-88fb-9968323fa394"/>
+				<textElement textAlignment="Center">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[RECIBO OFICIAL]]></text>
+			</staticText>
+			<line>
+				<reportElement x="7" y="160" width="552" height="1" uuid="941e34a0-2e94-484c-a3c7-ecb8ae52befd"/>
+				<graphicElement>
+					<pen lineWidth="1.5"/>
+				</graphicElement>
+			</line>
+			<image hAlign="Center" vAlign="Middle">
+				<reportElement x="411" y="1" width="150" height="72" uuid="f88ef8c0-a209-4167-a9a2-54863b53312e"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<imageExpression><![CDATA[javax.imageio.ImageIO.read(new java.io.ByteArrayInputStream(java.util.Base64.getDecoder().decode("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")))]]></imageExpression>
+			</image>
+			<image hAlign="Center" vAlign="Middle">
+				<reportElement x="6" y="-12" width="161" height="97" uuid="9c47dc74-2467-4f0b-a274-c2f4baf309b5"/>
+				<imageExpression><![CDATA[javax.imageio.ImageIO.read(new java.io.ByteArrayInputStream(java.util.Base64.getDecoder().decode($P{Logo})))]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="290" y="128" width="112" height="14" uuid="1290b570-b227-4c2a-8d83-b8fc4fae11bc">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CERTIFICADO:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="402" y="128" width="153" height="14" uuid="4b127428-8476-4f9e-9a81-21acea71d93c"/>
+				<box leftPadding="3"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+			</textField>
+		</band>
+	</title>
+	<lastPageFooter>
+		<band height="184">
+			<textField>
+				<reportElement x="179" y="174" width="100" height="10" uuid="3bc168df-8888-4ce8-83c8-670be7f743cf"/>
+				<box rightPadding="0"/>
+				<textElement textAlignment="Right">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Pagina "+$V{PAGE_NUMBER}+" de "]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="280" y="173" width="99" height="10" uuid="1beb3756-6dc6-4834-8f55-9fcf1f7c416a"/>
+				<box leftPadding="0"/>
+				<textElement>
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<image scaleImage="FillFrame">
+				<reportElement x="414" y="40" width="123" height="123" uuid="4f706c29-dcb6-4b3e-93d9-3bf17ef9678a">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<imageExpression><![CDATA[javax.imageio.ImageIO.read(new java.io.ByteArrayInputStream(java.util.Base64.getDecoder().decode($P{QR})))]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="7" y="45" width="387" height="17" uuid="d8502ef2-e62b-4606-b202-a3aaaba830c7"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cadena original]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="7" y="63" width="387" height="23" uuid="6971e071-d20c-42c6-94e9-e563f5061538"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{CadenaOriginal}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="7" y="97" width="387" height="17" uuid="2cdcf5ed-b44e-4b1f-826f-7170ab3e1548"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Sello digital]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="7" y="115" width="387" height="42" uuid="64234ac5-0fe1-48b0-8f8c-ef759205c54e"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{FirmaElectronica}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy" isBlankWhenNull="true">
+				<reportElement x="0" y="0" width="570" height="17" uuid="1c0343da-bc53-4ab0-9fcc-5511bc3871c1">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Puesto}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="0" y="21" width="570" height="17" uuid="08938aca-de27-4347-8623-d0e2008b391d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Responsable}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="6" y="158" width="552" height="1" uuid="30ba9832-6ada-4bea-9da4-e650f91c32a7"/>
+				<graphicElement>
+					<pen lineWidth="1.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="6" y="172" width="552" height="1" uuid="2a462131-e7a0-4fbd-a9de-21b7ff9e5662"/>
+				<graphicElement>
+					<pen lineWidth="1.5"/>
+				</graphicElement>
+			</line>
+			<textField isBlankWhenNull="true">
+				<reportElement x="6" y="160" width="552" height="12" isRemoveLineWhenBlank="true" uuid="eb5e7f4e-cc13-47a5-a3ea-a226b3fe2ab0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Para validar este recibo consulte la página " + $P{Dominio}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy  HH:mm:ss  ">
+				<reportElement x="466" y="173" width="92" height="10" uuid="93912db1-e37c-4f33-a8d3-91a0c85e5f9a">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new Date ()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="406" y="173" width="60" height="10" uuid="7880dfd3-9637-4489-8f54-8b9956590fd8">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[Fecha Impresion : ]]></text>
+			</staticText>
+			<line>
+				<reportElement x="7" y="44" width="552" height="1" uuid="5545026c-1ba1-420a-969b-37274ed3e7bf"/>
+				<graphicElement>
+					<pen lineWidth="1.5"/>
+				</graphicElement>
+			</line>
+		</band>
+	</lastPageFooter>
+</jasperReport>

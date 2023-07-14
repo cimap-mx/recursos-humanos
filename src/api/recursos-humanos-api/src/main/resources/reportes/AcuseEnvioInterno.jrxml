@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.13.0.final using JasperReports Library version 6.13.0-46ada4d1be8f3c5985fd0b6146f3ed44caed6f05  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank_Letter" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a5c96eb2-7760-44be-b293-04eae22fee69">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="FolioDocumento" class="java.lang.String">
+		<parameterDescription><![CDATA[folioDocumento]]></parameterDescription>
+	</parameter>
+	<parameter name="FechaFirmaParam" class="java.lang.String">
+		<parameterDescription><![CDATA[fechaFirmaParam]]></parameterDescription>
+	</parameter>
+	<parameter name="SujetoObligado" class="java.lang.String">
+		<parameterDescription><![CDATA[sujetoObligado]]></parameterDescription>
+	</parameter>
+	<parameter name="CorreoTitularSujetoObligado" class="java.lang.String">
+		<parameterDescription><![CDATA[correoTitularSujetoObligado]]></parameterDescription>
+	</parameter>
+	<parameter name="CadenaOriginalParametro" class="cadenaOriginalParametro">
+		<parameterDescription><![CDATA[cadenaOriginal]]></parameterDescription>
+	</parameter>
+	<parameter name="CargoTitularSujetoObligado" class="java.lang.String">
+		<parameterDescription><![CDATA[cargoTitularSujetoObligado]]></parameterDescription>
+	</parameter>
+	<parameter name="FirmanteParamentro" class="java.lang.String">
+		<parameterDescription><![CDATA[firmanteParamentro]]></parameterDescription>
+	</parameter>
+	<parameter name="FechaBuzon" class="java.lang.String">
+		<parameterDescription><![CDATA[fechaBuzon]]></parameterDescription>
+	</parameter>
+	<parameter name="CertificadoParam" class="java.lang.String">
+		<parameterDescription><![CDATA[certificadoParam]]></parameterDescription>
+	</parameter>
+	<parameter name="SelloParam" class="java.lang.String">
+		<parameterDescription><![CDATA[selloParam]]></parameterDescription>
+	</parameter>
+	<parameter name="TitularSujetoObligado" class="java.lang.String">
+		<parameterDescription><![CDATA[titularSujetoObligado]]></parameterDescription>
+	</parameter>
+	<field name="Firmante" class="java.lang.String">
+		<fieldDescription><![CDATA[firmante]]></fieldDescription>
+	</field>
+	<field name="CadenaOriginal" class="java.lang.String">
+		<fieldDescription><![CDATA[cadenaOriginal]]></fieldDescription>
+	</field>
+	<field name="Sello" class="java.lang.String">
+		<fieldDescription><![CDATA[sello]]></fieldDescription>
+	</field>
+	<field name="Certificado" class="java.lang.String">
+		<fieldDescription><![CDATA[certificado]]></fieldDescription>
+	</field>
+	<field name="FechaFirma" class="java.lang.String">
+		<fieldDescription><![CDATA[fechaFirma]]></fieldDescription>
+	</field>
+	<field name="Cargo" class="java.lang.String">
+		<fieldDescription><![CDATA[cargo]]></fieldDescription>
+	</field>
+	<field name="SujetoObligado" class="java.lang.String">
+		<fieldDescription><![CDATA[sujetoObligado]]></fieldDescription>
+	</field>
+	<field name="FolioDocumento" class="java.lang.String">
+		<fieldDescription><![CDATA[folioDocumento]]></fieldDescription>
+	</field>
+	<field name="FechaEnvioBuzon" class="java.lang.String">
+		<fieldDescription><![CDATA[fechaEnvioBuzon]]></fieldDescription>
+	</field>
+	<field name="Descripcion" class="java.lang.String">
+		<fieldDescription><![CDATA[descripcion]]></fieldDescription>
+	</field>
+	<field name="Correo" class="java.lang.String">
+		<fieldDescription><![CDATA[correo]]></fieldDescription>
+	</field>
+	<field name="Organismo" class="java.lang.String">
+		<fieldDescription><![CDATA[organismo]]></fieldDescription>
+	</field>
+	<group name="FirmasUsuariosInternos"/>
+	<title>
+		<band height="236">
+			<staticText>
+				<reportElement x="0" y="6" width="572" height="44" uuid="178c4264-d818-4ec2-b19f-e9848ede3a62"/>
+				<textElement textAlignment="Center">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CONSTANCIA DE FIRMADO ELECTRÓNICO]]></text>
+			</staticText>
+			<frame>
+				<reportElement x="0" y="36" width="572" height="34" uuid="dba4fffa-b1d3-4ee1-b335-a0be44439b0f">
+					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+				</reportElement>
+				<frame>
+					<reportElement x="0" y="0" width="572" height="34" uuid="29f3b019-6ec5-4b8b-a856-2544cbc99086"/>
+				</frame>
+			</frame>
+			<frame>
+				<reportElement x="0" y="71" width="572" height="88" uuid="b9ddbe47-19cd-47d9-ad5d-00a08f25aa9b">
+					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<staticText>
+					<reportElement x="0" y="0" width="192" height="88" uuid="aa99c979-9a28-4e05-bf10-56f1654e143b"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<text><![CDATA[INSTITUTO ZACATECANO DE
+TRANSPARENCIA, ACCESO A LA
+INFORMACIÓN Y PROTECCIÓN DE
+DATOS PERSONALES]]></text>
+				</staticText>
+				<image hAlign="Center" vAlign="Middle">
+					<reportElement positionType="Float" x="241" y="9" width="100" height="69" uuid="244b5357-e05d-4914-9b9f-15db4a4569f8"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<imageExpression><![CDATA[javax.imageio.ImageIO.read(new java.io.ByteArrayInputStream(new sun.misc.BASE64Decoder().decodeBuffer("iVBORw0KGgoAAAANSUhEUgAAAGQAAABFCAMAAACLzLP1AAAAAXNSR0IB2cksfwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAVNQTFRF////+fz63u3jxN7MyOHP7/bxstW9IoVAH4M+IIQ+cbGE5PDo0OXXGoE6GIA4GIA4GYA5PpRZQpdcZap79vr3rtK6GoE6GIA4HoM85fHpu9nEHoM9Z6t74/DnJIZCGIA4GYA5PpRZI4ZBZap6JYdDIYVAZqt7GYE5GIA4Z6x95fHp8vj0Zap7GoE6GYE5P5VaaKx8IoZBIIRA6/TtbrCCGYE59fn2cbGFG4E67vXweLWLGIA4JIdCGIA48ffzfriQGYE5Z6t8/P38g7uUG4E6P5VZ5vHp9Pn2grqTGIA4GYE5aKt9KIhGGIA4GIA4IYRA+/37lcWkGYE5GIA4/f79G4I7P5Za6PLrnsmsGIA4GYE5aKx9MIxNGIA4zOPTJIdDIIQ+IIQ+GIA4GIA4IYVAHoM9HoM9I4ZBGIA44O7kzuTU6fPsbK+AJoZDGIA4I4ZCJIdChC9stgAAAHF0Uk5T/+rK6OTXsJPSyKLjt9f9//HIs7rttdD7w+Knr7bkePrwx4e7bqW48P604fG54u/DtJOt3Kfr76HQ2ZX3fPPVjNi154a/w+HSh+7us1rW/KTMcsr45qa/32zb7bNEyJd3xdDQ4ajp/5P1aXTeq2n2hXZsKXSRAAABfElEQVR4nO2YVU8DQRSFB5ctO3jxFl+guLtbsRZ3d///T2wIIXfedtuck0B6/sCXO3euHaVS+vNKS8/IzEJDsnNy8/ItLCNQYGtdWASlBIpdhkspwVFKy8qD+lt2RSUKUlX9w3ApNbUgSF1I/ypcD6I0aKFwI4bSFJIUuxkCsVpaJcVpa0dQOiKdktLVDaFYPUGDgolF9Zp56YNA+gcGHZmXCCSWoeERQl5Gx8YZeZmYJNTL1PSM/GTOLKQnz80vGC+2uISgLK+sylCiaxCKWt+QsWxuQSCx+PaOzD4mlt34nowlun+AoMQOj2Rejk8w9XJ6lkS9nF9cXnnR9Y2E+Jwvt0bf8C5ffewuMYa/PnafKETbDwSIfnwiQPTzP4nER04ov4tSJ5SK96qkepc3MbowY55QJiNhxjO2FcbeRdkgCbswY6tn3Ccvr+alBelXhJuRcf0y7niKI/H2Dq8PpT4kA+USfTL8LopzR/EgKW6q4vjCHIeb49WnBNcXu8CWvlqoU+8AAAAASUVORK5CYII=")))]]></imageExpression>
+				</image>
+				<frame>
+					<reportElement x="382" y="0" width="190" height="88" uuid="2789216c-bdf4-430e-afc2-d64dbec08497"/>
+					<textField>
+						<reportElement x="0" y="0" width="190" height="88" uuid="ef2ca3f9-8dfb-41e6-b6ae-3910d7fbb897"/>
+						<box>
+							<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+							<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+						<textElement textAlignment="Center" verticalAlignment="Middle"/>
+						<textFieldExpression><![CDATA[$F{SujetoObligado}]]></textFieldExpression>
+					</textField>
+				</frame>
+			</frame>
+			<frame>
+				<reportElement x="0" y="159" width="572" height="31" uuid="b580a247-4824-470a-adee-b7a61f424b40">
+					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.HorizontalRowLayout"/>
+				</reportElement>
+				<textField>
+					<reportElement x="0" y="0" width="572" height="31" uuid="77a210a8-4f4c-46d5-8618-d1785cba378e">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="631f0571-a183-4472-b5fc-8f325fb36b37"/>
+					</reportElement>
+					<box>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression><![CDATA[$F{FechaEnvioBuzon}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement mode="Opaque" x="1" y="200" width="572" height="30" backcolor="#F2BD88" uuid="eb23e4ce-06f7-4aff-9509-9384d1bcbca0">
+					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textField>
+					<reportElement x="1" y="1" width="570" height="30" uuid="4ed43f53-c5d3-46bf-9f8d-a087687bdd64">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="93396788-6fec-46c4-a2e9-2f542cbe7740"/>
+					</reportElement>
+					<textFieldExpression><![CDATA[$F{Descripcion}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<image hAlign="Center" vAlign="Middle">
+				<reportElement x="1" y="0" width="139" height="71" uuid="9813f481-abd0-4daa-8eb3-acdb4cb7068b"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<imageExpression><![CDATA[javax.imageio.ImageIO.read(new java.io.ByteArrayInputStream(new sun.misc.BASE64Decoder().decodeBuffer("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")))]]></imageExpression>
+			</image>
+			<image hAlign="Center" vAlign="Middle">
+				<reportElement x="433" y="1" width="139" height="70" uuid="68876ad6-1147-44d0-8d26-a2598008e648"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<imageExpression><![CDATA[javax.imageio.ImageIO.read(new java.io.ByteArrayInputStream(new sun.misc.BASE64Decoder().decodeBuffer("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")))]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<detail>
+		<band height="166" splitType="Stretch">
+			<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+			<frame>
+				<reportElement positionType="Float" x="0" y="4" width="572" height="160" uuid="6e7f2c66-80c3-4740-a25a-0464ffbec4bd"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textField>
+					<reportElement x="100" y="31" width="462" height="16" uuid="c774f690-4655-4026-a401-54536ff83f84">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textFieldExpression><![CDATA[$F{Cargo}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="100" y="51" width="462" height="16" uuid="06aaae6d-20d1-478e-9141-cda652816b25">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textFieldExpression><![CDATA[$F{Firmante}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="10" y="11" width="74" height="16" uuid="547712e5-9b76-46ac-ac6a-efd6b4672a8b">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[Organismo:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="10" y="30" width="130" height="16" uuid="44ab4db9-e180-4991-8b83-02d6e237b45f"/>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[Cargo:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="10" y="51" width="160" height="16" uuid="bd2f29c8-025e-480b-ac1f-e2b838c8b75f"/>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[Nombre:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="10" y="72" width="74" height="16" uuid="62adbe77-7ce8-47e2-b3d4-e23f04e94deb"/>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[Fecha firma:]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="100" y="72" width="462" height="16" uuid="5eba7b53-9cb7-47ff-bea3-999cfa661417">
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textFieldExpression><![CDATA[$F{FechaFirma}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="10" y="93" width="84" height="16" uuid="f8a7e03e-02fc-4264-93cc-7ed419d60c9f"/>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[Certificado:]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="100" y="93" width="462" height="16" uuid="f3a8700a-bd72-4a3e-858b-f91204f3ac22">
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textFieldExpression><![CDATA[$F{Certificado}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement positionType="Float" x="10" y="115" width="84" height="16" uuid="06641b93-dbcc-4231-bc43-8d685beebbc7"/>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[Cadena original:]]></text>
+				</staticText>
+				<textField textAdjust="StretchHeight">
+					<reportElement positionType="Float" x="100" y="115" width="462" height="16" uuid="98daced7-8e6f-405c-9298-d75e3f8a2d81">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					</reportElement>
+					<textFieldExpression><![CDATA[$F{CadenaOriginal}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement positionType="Float" x="10" y="136" width="100" height="16" uuid="7b5e799b-2e2c-43e8-b222-ff7eb7990a7e"/>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[Sello:]]></text>
+				</staticText>
+				<textField textAdjust="StretchHeight">
+					<reportElement positionType="Float" x="100" y="136" width="462" height="16" uuid="f4bf4fa4-d5b0-4883-80c7-ad999d959df3">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textFieldExpression><![CDATA[$F{Sello}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="2" y="-212" width="560" height="31" forecolor="#0000FF" uuid="0020f607-8cba-4745-8bde-92fe272fe119"/>
+					<textElement textAlignment="Center">
+						<font size="16" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{FolioDocumento}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="100" y="12" width="461" height="16" uuid="e755471e-3b63-483c-b1f7-56a44bf23b63"/>
+					<textFieldExpression><![CDATA[$F{Organismo}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="140" y="-190" width="293" height="20" uuid="f2db2c87-6672-416f-a3df-abc6473d59fb"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<text><![CDATA[Número de Folio]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</detail>
+	<lastPageFooter>
+		<band height="73">
+			<frame>
+				<reportElement x="1" y="10" width="571" height="60" uuid="cdbd5ede-b4dd-4a0b-b835-253f088fe17b">
+					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<staticText>
+					<reportElement x="9" y="0" width="552" height="60" uuid="e19161a7-fe13-4ce9-bd94-5e703e0290ee"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Justified">
+						<font size="9"/>
+					</textElement>
+					<text><![CDATA[Con base al Artículo 35. Se generará en automático para el IZAI, un acuse de recibo electrónico, para hacer constar la recepción de las promociones y/o actuaciones electrónicas realizadas por parte del sujeto obligado o responsable, que haga uso de la firma electrónica a través del sistema CIMAP, del Reglamento de firma electrónica avanzada y notificación en actos, procedimientos, trámites y requerimientos a cargo del Municipio de Tlaltenango del Estado de Zacatecas]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</lastPageFooter>
+</jasperReport>
