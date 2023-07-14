@@ -13,8 +13,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 @RestController
-@RequestMapping("recursosHumanos/personal/unidades/")
-public class UnidadRestController {
+@RequestMapping("personal/unidades/")
+public class UnidadController {
 	
 	@Autowired
 	UnidadService unidadService;
@@ -24,8 +24,8 @@ public class UnidadRestController {
 		return unidadService.obtenerLista();
 	}
 	
-	@PostMapping("guardar")
-	public Integer guardar(@RequestBody UnidadRequest unidad) {
+	@PostMapping("agregar")
+	public Integer agregar(@RequestBody UnidadRequest unidad) {
 		return unidadService.agregar(unidad);
 	}
 	

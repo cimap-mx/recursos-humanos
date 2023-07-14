@@ -63,6 +63,7 @@ public class UnidadService {
 		*/
 
 	//	unidadEntity.setClave(clave);
+		unidadEntity.setNivel(nivel);
 		unidadEntity.setNombre(nombre);
 		unidadEntity.setAbreviatura(abreviatura);
 				

@@ -14,7 +14,7 @@ import javax.persistence.Table;
 
 
 @Entity
-@Table(name = "unidad", schema = "recursos_humanos")
+@Table(name = "unidad", schema = "personal")
 public class UnidadEntity implements Serializable {
 
 	private static final long serialVersionUID = 3277816458407947533L;
@@ -30,13 +30,14 @@ public class UnidadEntity implements Serializable {
 	@Column(name = "abreviatura")
 	private String abreviatura;
 	
+	@Column(name = "nivel")
+	private Integer nivel;
+	
 	@ManyToOne(fetch=FetchType.LAZY)
 	@JoinColumn(name="id_padre")
 	private UnidadEntity padre;
 	
-	@ManyToOne(fetch=FetchType.LAZY)
-	@JoinColumn(name="id_organigrama")
-	private OrganigramaEntity organigrama;
+	
 
 	public Integer getIdUnidad() {
 		return idUnidad;
@@ -70,14 +71,14 @@ public class UnidadEntity implements Serializable {
 		this.padre = padre;
 	}
 
-	public OrganigramaEntity getOrganigrama() {
-		return organigrama;
+	public Integer getNivel() {
+		return nivel;
 	}
 
-	public void setOrganigrama(OrganigramaEntity organigrama) {
-		this.organigrama = organigrama;
+	public void setNivel(Integer nivel) {
+		this.nivel = nivel;
 	}
-	
+
 	
 	
 }

@@ -52,7 +52,7 @@ public class GlobalExceptionHandler {
         return errorResponse;
     }
 	
-	
+	/*
 	@ResponseStatus(HttpStatus.UNAUTHORIZED)
     @ExceptionHandler(SesionException.class)
     @ResponseBody
@@ -62,6 +62,7 @@ public class GlobalExceptionHandler {
 		errorResponse.setMessage(ex.getMessage());
         return errorResponse;
     }
+    */
 	
 	@ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
     @ExceptionHandler(Throwable.class)

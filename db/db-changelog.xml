@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+				   
+	<include file="scripts/230323_1421_create_schema_personal.sql" relativeToChangelogFile="true"/>
+	<include file="scripts/230323_1436_crear_tabla_personal_puesto.sql" relativeToChangelogFile="true"/>
+	<include file="scripts/230323_1619_create_table_jerarquia.sql" relativeToChangelogFile="true"/>
+	<include file="scripts/020423_1912_mod_tabla_unidad.sql" relativeToChangelogFile="true"/>
+	<include file="scripts/030423_1215_organigrama.sql" relativeToChangelogFile="true"/>
+	
+</databaseChangeLog>
+

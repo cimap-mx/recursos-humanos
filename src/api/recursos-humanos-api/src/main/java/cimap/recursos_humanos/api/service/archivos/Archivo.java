@@ -1,4 +1,4 @@
-package cimap.recursos_humanos.api.archivos;
+package cimap.recursos_humanos.api.service.archivos;
 
 public class Archivo {
 

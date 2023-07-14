@@ -1,0 +1,19 @@
+Comandos para gestionar la base de datos
+
+1. Entrar a la consola de psql
+psql -U postgres
+Cuando nos pida el passoword introduce 'postgres' (sin comillas)
+Recuerda haber instaldo previamente postgres un usuario con las siguientes credenciales:
+user: postgres
+password: postgres
+
+2. Comando para crear una base de datos
+ Entrar en la consola de psql
+ create database [DATABASE];
+
+3. Comando para hacer el respaldo de la base de datos
+pg_dump -U postgres [DATABASE] > DATABASE_AMBIENTE_VERSION_TIMESTAMP
+
+4. Comando para restaurar la base de datos
+psql -U postgres cimap_finanzas_AMBIENTE < cimap_finanzas_AMBIENTE_VERSION_TIMESTAMP
+

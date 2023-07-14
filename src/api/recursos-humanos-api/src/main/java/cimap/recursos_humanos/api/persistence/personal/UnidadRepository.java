@@ -15,7 +15,7 @@ public interface UnidadRepository extends JpaRepository<UnidadEntity, Integer>{
     @Query(value="SELECT * FROM recursos_humanos.unidad AS u WHERE u.descripcion_nivel = 'T'", nativeQuery = true)
 	List<UnidadEntity> listaPrimerNivelUnidad();
     */
-    List<UnidadEntity> findByIdPadre(Integer idRaiz);
+ //   List<UnidadEntity> findByIdPadre(Integer idRaiz);
     
     Long countByPadre(UnidadEntity unidad);
 

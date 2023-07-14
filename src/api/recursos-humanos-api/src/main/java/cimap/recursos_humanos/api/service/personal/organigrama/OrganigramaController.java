@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("personal/organigrama")
-public class OrganigramaRestController {
+public class OrganigramaController {
 
 	@Autowired
 	private OrganigramaService organigramaService;

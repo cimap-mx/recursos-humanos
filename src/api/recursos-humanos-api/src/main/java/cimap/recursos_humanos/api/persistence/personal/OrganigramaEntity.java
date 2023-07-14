@@ -24,9 +24,6 @@ public class OrganigramaEntity {
 	@JoinColumn(name="id_padre")
 	private OrganigramaEntity padre;
 	
-	@Column(name="indice")
-	private String indice;
-	
 	@Column(name="nombre")
 	private String nombre;
 	
@@ -34,10 +31,7 @@ public class OrganigramaEntity {
 	private Integer idTipo;
 	
 	@Column(name = "nivel")
-	private Integer nivel;
-	
-	@Column(name = "numero_indice")
-	private Integer numeroIndice;	
+	private Integer nivel;	
 	
 	@ManyToOne(fetch=FetchType.LAZY)
 	@JoinColumn(name="id_unidad")
@@ -67,13 +61,7 @@ public class OrganigramaEntity {
 		this.padre = padre;
 	}
 
-	public String getIndice() {
-		return indice;
-	}
-
-	public void setIndice(String indice) {
-		this.indice = indice;
-	}
+	
 
 	public String getNombre() {
 		return nombre;
@@ -98,15 +86,7 @@ public class OrganigramaEntity {
 	public void setNivel(Integer nivel) {
 		this.nivel = nivel;
 	}
-
-	public Integer getNumeroIndice() {
-		return numeroIndice;
-	}
-
-	public void setNumeroIndice(Integer numeroIndice) {
-		this.numeroIndice = numeroIndice;
-	}
-
+	
 	public UnidadEntity getUnidad() {
 		return unidad;
 	}

@@ -1,0 +1,1 @@
+java -Xms512m -jar liquibase.jar --classpath=postgresql-42.2.5.jar --changeLogFile=db-changelog.xml --url=jdbc:postgresql://localhost:5432/cimap_rh --username=postgres --password=postgres --driver=org.postgresql.Driver update
